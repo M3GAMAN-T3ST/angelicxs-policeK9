@@ -1,7 +1,7 @@
 Config = {}
 
-Config.UseESX = true								-- Use ESX Framework
-Config.UseQBCore = false							-- Use QBCore Framework (Ignored if Config.UseESX = true)
+Config.UseESX = false								-- Use ESX Framework
+Config.UseQBCore = true							-- Use QBCore Framework (Ignored if Config.UseESX = true)
 
 Config.UseCustomNotify = false				-- Use a custom notification script, must complete event below.
 -- Only complete this event if Config.UseCustomNotify is true; mythic_notification provided as an example
@@ -22,9 +22,9 @@ Config.K9Kennel = {									-- Location of where police can pull out a K9
 	vector3(453.94, -990.0, 30.69),
 }
 Config.DogMaxHp = 200								-- Sets Dog's max hp (MAX IS 200)
-Config.LEOJobName = {'police'}						-- Name of police job that can pull out K9
+Config.LEOJobName = {'police', 'lspd', 'sasp', 'bcso', 'sapr'} -- Name of police job that can pull out K9
 Config.JobRestriction = true						-- If true, only allows police of a certain rank or higher to pull out a K9
-Config.JobRank = 3									-- If Config.JobRestriction = true, then sets what minimum rank a police officer must be to pull out a K9
+Config.JobRank = 1									-- If Config.JobRestriction = true, then sets what minimum rank a police officer must be to pull out a K9
 Config.ItemRestriction = false						-- If true, will only allow anyone with the item to spawn K9 (can be used with Config.JobRestriction to only let police with a certain item spawn K9)
 Config.AllowedItemList = {'itemnamelisthere'}		-- If Config.ItemRestriction = true, the list of items that will allow a K9 to spawn
 
@@ -70,9 +70,6 @@ Config.SearchableItems = {
 	'gummy_purple-haze_cbd',
 	'gummy_gelato_cbd',
 	'gummy_zkittlez_cbd',
-	
-
-
 }
 
 -- Language Configuration
@@ -91,6 +88,4 @@ Config.Lang = {
 	['get_k9'] = 'Get/Return K9',
 	['search_car_k9'] = 'Search Vehicle with K9',
 	['search_person_k9'] = 'Search Person with K9',
-
-
 }
